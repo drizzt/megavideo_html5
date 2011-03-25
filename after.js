@@ -1,6 +1,7 @@
 /* Copyright © 2011 Timothy Redaelli <timothy.redaelli@gmail.com>       */
 /* Distribuited under Creative Commons Attribution Share Alike (BY-SA). */
 
+/* decrypt function taked from http://userscripts.org/scripts/show/42944 */
 function decrypt(str, key1, key2)
 {
     var loc1 = [];
