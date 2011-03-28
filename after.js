@@ -73,10 +73,31 @@ function getvars()
     }
 }
 
+//function pubDateFix() {
+//}
+
 (function ()
 {
+    /* Inject video.js */
+    var js = document.createElement('script');
+    js.src = chrome.extension.getURL('video.js');
+    js.charset = 'utf-8';
+    js.type = 'text/javascript';
+    document.head.appendChild(js);
+
+    /* Inject video-js.css */
+    var css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.type = 'text/css';
+    css.media = 'screen';
+    css.title = 'Video JS';
+    css.href = chrome.extension.getURL('video-js.css');
+    document.head.appendChild(css);
+
+    /* Get video and image (if exists) url */
     var vars = getvars();
 
+    /* Create video */
     var div = document.createElement('div');
     div.className = 'video-js-box';
     var video = document.createElement('video');
@@ -99,10 +120,7 @@ function getvars()
 
     playerdiv.appendChild(div);
 
-    var js = document.createElement('script');
-    js.type = 'text/javascript';
-    js.innerHTML = 'VideoJS.setupAllWhenReady();';
-    document.head.insertBefore(js);
-
+    /* Disable first button */
     document.getElementById('pbut1').href = 'javascript:void();';
+
 })();

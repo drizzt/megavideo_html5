@@ -1,15 +1,8 @@
 {
    "content_scripts": [ {
-      "js": [ "before.js" ],
-      "matches": [ "http://*.megavideo.com/?d=*", "http://megavideo.com/?d=*", "http://megavideo.com/?v=*",
-      "http://*.megavideo.com/?v=*" ],
-      "run_at": "document_start"
-   },
-   {
       "js": [ "after.js" ],
       "matches": [ "http://*.megavideo.com/?d=*", "http://megavideo.com/?d=*", "http://megavideo.com/?v=*",
-      "http://*.megavideo.com/?v=*" ],
-      "run_at": "document_end"
+      "http://*.megavideo.com/?v=*" ]
    }
    ],
    "description": "Allows you to use a HTML5 player, rather than the megavideo player.",
