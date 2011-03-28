@@ -1,6 +1,6 @@
 {
    "content_scripts": [ {
-      "js": [ "after.js" ],
+      "js": [ "content.js" ],
       "matches": [ "http://*.megavideo.com/?d=*", "http://megavideo.com/?d=*", "http://megavideo.com/?v=*",
       "http://*.megavideo.com/?v=*" ]
    }

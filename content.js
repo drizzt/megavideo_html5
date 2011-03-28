@@ -73,9 +73,6 @@ function getvars()
     }
 }
 
-//function pubDateFix() {
-//}
-
 (function ()
 {
     /* Inject video.js */
